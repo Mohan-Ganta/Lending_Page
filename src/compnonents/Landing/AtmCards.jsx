@@ -8,7 +8,7 @@ import "./AtmCards.css";
 export default function AtmCards() {
   return (
     <div>
-       <h1 className="sub-hed-card">Cards Avabile Hear</h1>
+       <h1 className="sub-hed-card">Cards Available Here</h1>
       <div>
         <div class="card-group">
           <article class="card">
