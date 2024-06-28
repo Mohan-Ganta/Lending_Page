@@ -34,16 +34,16 @@ export default function Status() {
         <div className="stats-item">
           <span
             className="counter"
-            data-target="521"
+            data-target="350"
           >0</span>
           <p>
-            <strong>Projects</strong> Completed projects ensure success
+            <strong>Employs</strong> 
           </p>
         </div>
         <div className="stats-item">
           <span
             className="counter"
-            data-target="521"
+            data-target="100"
           >0</span>
           <p>
             <strong>Projects</strong> Completed projects ensure success
