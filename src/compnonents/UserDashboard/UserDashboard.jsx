@@ -53,12 +53,10 @@ const transactions = [
 
 const UserDashboard = () => {
   useEffect(()=>{
-    console.log("dasghhh")
     localStorage.setItem("loading", "false");
   })
   const availableBalance = 1000;
 
-  const navigate = useNavigate(); // Hook for navigation
   const location = useLocation();
   const { state } = location;
   const { email, name, subject } = state || {};

@@ -88,9 +88,6 @@ const Sidebar = () => {
       <div className={`sidebar-item ${activePath === '/recharge' ? 'active' : ''}`} onClick={() => handleNavigation('/recharge')}>
         <FontAwesomeIcon icon={faUser} /> <span>Bill Pay</span>
       </div>
-      <div className={`sidebar-item ${activePath === '/profile' ? 'active' : ''}`} onClick={() => handleNavigation('/profile')}>
-        <FontAwesomeIcon icon={faBell} /> <span>Profile</span>
-      </div>
       <div className={`sidebar-item ${activePath === '/cards' ? 'active' : ''}`} onClick={() => handleNavigation('/cards')}>
         <FontAwesomeIcon icon={faCreditCard} /> <span>Cards</span>
       </div>

@@ -157,7 +157,7 @@
   transform: scale(1.1);
 }
 
-.horizontal-line{
+.userdashboard-main-container .horizontal-line{
   /* width: 85vw; */
   margin-top: -30px;
   border: solid 1px;
@@ -182,7 +182,7 @@
   margin: 10px;
   width: 98%;
   border-collapse: collapse;
-  border: #ddd;
+  border: none;
 }
 
 .recent-transactions th,
