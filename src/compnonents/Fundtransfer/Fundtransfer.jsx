@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Form, Input, Pagination,Button } from 'antd';
 import'./Fundtransfer.css';
-export default function Fundtransfer() {
+const  Fundtransfer = ()=> {
+  useEffect(()=>{
+    localStorage.setItem("loading", "false");
+  })
   return (
     
     <div className="Funds-container">
+      <hr className="horizontal-line" />
        
       <Form layout="vertical">
         <Form.Item className='label' label="Account Number">
@@ -16,8 +20,6 @@ export default function Fundtransfer() {
         <Form.Item className='label' label="Amount">
           <Input placeholder='Enter Amount' required />
         </Form.Item>
-        
-       
       
       <Form.Item><button> Continue</button></Form.Item>
       </Form>
@@ -25,3 +27,5 @@ export default function Fundtransfer() {
     </div>
   )
 }
+
+export default Fundtransfer

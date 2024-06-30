@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./UserDashboard.css";
+import CountUp from 'react-countup';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMoneyCheckAlt,
@@ -51,7 +52,10 @@ const transactions = [
 ];
 
 const UserDashboard = () => {
-  localStorage.setItem("loading", "false");
+  useEffect(()=>{
+    console.log("dasghhh")
+    localStorage.setItem("loading", "false");
+  })
   const availableBalance = 1000;
 
   const navigate = useNavigate(); // Hook for navigation
@@ -63,76 +67,70 @@ const UserDashboard = () => {
   console.log(subject);
   console.log("State in TeacherDashboard:", { email, name, subject });
 
-  const handleViewTeachers = () => {
-    navigate("/Dashboard/ViewTeachers", { state: { email, name, subject } });
-  };
 
-  const handleAddStudent = () => {
-    navigate("/Dashboard/AddStudent", { state: { email, name, subject } });
-  };
-
-  const handleAddAdmin = () => {
-    navigate("/register/RegisterAdmin", { state: { email, name, subject } });
-  };
-
-  const handleViewStudents = () => {
-    navigate("/Dashboard/ViewStudents", { state: { email, name, subject } });
-  };
-
-  const handleAddTeachers = () => {
-    navigate("/register/teacher", { state: { email, name, subject } });
-  };
-
-  const getProgressBarColor = (amount) => {
-    if (amount < 1000) return "red";
-    if (amount < 5000) return "orange";
-    return "green";
-  };
 
   return (
     <div className="userdashboard-main-container">
       <hr className="horizontal-line" />
       <div className="account-info">
-        <div style={{ marginLeft: "25px" }}>
-          <p className="">Date: [Date]</p>
+        <div>
+          <p className="info-card">Date: [Date]</p>
           <p>AccountID: [AccountID]</p>
           <p>Mobile: [mobile]</p>
         </div>
-        <div className="amount">
-          <p >Available Balance :</p>
+        <div className="in-out-amount-cards">
+        <div  className="account-info-card">
+        <p style={{display:"flex",justifyContent:"center",alignItems:"center"}}><div className="dots bg-green"></div> In Amount</p>
+          <div >
+            <i className="fa-solid fa-indian-rupee-sign"></i>{" "}
+            <span style={{fontSize:"35px"}}><CountUp start={0} end={896} duration={1.6} separator="," /></span>
+          </div>
+          
+        </div>
+        <div className="account-info-card">
+        <p style={{display:"flex",justifyContent:"center",alignItems:"center"}}><div className="dots bg-yellow"></div> Out Amount</p>
+        <div >
+            <i className="fa-solid fa-indian-rupee-sign"></i>
+            <span style={{fontSize:"35px"}}><CountUp start={0} end={2456} duration={2} separator="," /></span>
+          </div>
+          
+        </div>
+        </div>
+        
+        <div className="balance-info-card ">
+          <p>Avl Balance :</p>
           <div>
-            <h1>
-              {" "}
-              <i className="fa-solid fa-indian-rupee-sign"></i>{" "}
-              {availableBalance.toLocaleString()}
-            </h1>
+          <div >
+            <i className="fa-solid fa-indian-rupee-sign"></i>
+            <span style={{fontSize:"32px"}}> <strong><CountUp start={0} end={125342} duration={3} separator="," /></strong></span>
+          </div>
           </div>
         </div>
       </div>
       <div className="quick-actions">
         <div className="quick-action">
           <FontAwesomeIcon
-            style={{ fontSize: "45px" }}
+            style={{ fontSize: "30px" }}
             icon={faMoneyCheckAlt}
           />
         </div>
         <div className="quick-action">
           <FontAwesomeIcon
-            style={{ fontSize: "45px" }}
+            style={{ fontSize: "30px" }}
             icon={faFileInvoiceDollar}
           />
         </div>
         <div className="quick-action">
-          <FontAwesomeIcon style={{ fontSize: "45px" }} icon={faExchangeAlt} />
+          <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faExchangeAlt} />
         </div>
         <div className="quick-action">
-          <FontAwesomeIcon style={{ fontSize: "45px" }} icon={faUser} />
+          <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faUser} />
         </div>
         <div className="quick-action">
-          <FontAwesomeIcon style={{ fontSize: "45px" }} icon={faBell} />
+          <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faBell} />
         </div>
         <div className="quick-action">
-          <FontAwesomeIcon style={{ fontSize: "45px" }} icon={faCreditCard} />
+          <FontAwesomeIcon style={{ fontSize: "30px" }} icon={faCreditCard} />
         </div>
       </div>
       <div className="recent-transactions">

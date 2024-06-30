@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <header className="header">
-          <h1>Welcome, UserName</h1>
+          <h2>Welcome, UserName</h2>
          <div className="search-bar-container">
             <FontAwesomeIcon icon={faSearch} className="search-icon" />
             <input 

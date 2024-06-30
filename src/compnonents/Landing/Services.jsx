@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./Services.css";
 import BS from "../Images/Businessbank.png";
 import PS from "../Images/persnolbanking.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Services() {
   const nextButtonRef = useRef(null);
@@ -10,6 +11,7 @@ export default function Services() {
   const listRef = useRef(null);
   const seeMoreButtonsRef = useRef([]);
   const backButtonRef = useRef(null);
+  const navigator = useNavigate()
 
   useEffect(() => {
     const nextButton = nextButtonRef.current;
@@ -53,6 +55,9 @@ export default function Services() {
     };
   }, []);
 
+  const handleRegister =()=>{
+    navigator("/register")
+  }
   return (
     <div className="carousels" ref={carouselsRef}>
       <div className="list" ref={listRef}>
@@ -113,7 +118,7 @@ export default function Services() {
               </div>
             </div>
             <div className="checkout">
-              <button>Create Account</button>
+              <button onClick={handleRegister}>Create Account</button>
               <button>Know More</button>
             </div>
           </div>
