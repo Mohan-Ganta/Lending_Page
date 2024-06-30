@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 100px;
-  animation: fadeIn 1s ease-in-out;
+  animation: slidedown 1s ease-in-out;
 }
 
 .email-verification-container {
@@ -109,7 +109,7 @@
   text-decoration: underline;
 }
 
-@keyframes fadeIn {
+@keyframes slidedown {
   from {
     opacity: 0;
     transform: translateY(-60px);

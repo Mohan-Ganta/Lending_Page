@@ -2,9 +2,9 @@
   border-radius: 5px;
   background-color: white;
   width: 82vw;
-  height: 78vh;
+  height: 80vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  animation: fadeIn 1s ease-out;
+  animation: slidedown 1s ease-out;
 }
 .container{
   margin: 2px;
@@ -38,7 +38,7 @@
   margin-bottom: 15px;
   margin-left: 80px;
   margin-top: -15px;
-  animation: fadeInUp 0.5s ease-out;
+  animation: slidedownUp 0.5s ease-out;
 }
 
 .personalDetails .form-group {
@@ -117,7 +117,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes slidedown {
   from {
     opacity: 0;
     transform: translateY(-60px);
