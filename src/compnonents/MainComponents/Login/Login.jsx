@@ -18,7 +18,6 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const url = `http://localhost:5000/users/login/${accountId}/${password}`;
-
     axios
       .get(url)
       .then((res) => {
@@ -26,6 +25,7 @@ const Login = () => {
         localStorage.setItem("Account_id", accountId);
         if (res.data.message === "Login successful") {
           setErrormsg();
+          alert("login Success")
           navigator("/dashboard");
         } else {
           setErrormsg(res.data.message);

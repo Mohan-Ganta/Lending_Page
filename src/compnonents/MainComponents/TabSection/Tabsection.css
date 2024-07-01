@@ -1,6 +1,7 @@
 .tabsection{
     position: absolute;
     left: 0;
+    top: 0;
     width: 100vw;
     overflow: hidden;
     height: 100vh;
@@ -14,9 +15,7 @@
     position: absolute;
     bottom: 2em;
     left: 10px;
-
   }
-
   .redirect-to-login a{
     text-decoration: none;
     color: blue;

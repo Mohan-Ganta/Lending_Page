@@ -5,7 +5,7 @@ import "react-toastify/ReactToastify.css";
 import axios from "axios";
 const Fundtransfer = () => {
   const [step, setStep] = useState(1);
-  const [accountuser, setAccountUer] = useState();
+  const [accountuser, setAccountUer] = useState(JSON.parse(localStorage.getItem("accountholder")));
   const [amount, setAmount] = useState();
   const [accountID, setAccountID] = useState();
   const [otpreceived, setOtpreceived] = useState();
@@ -24,13 +24,13 @@ alert(otp)
       alert("otp verified")
       const url = "http://localhost:5000/users/transaction";
       const trdata = {
-        "SenderAccountId" : "ZBKIN202400004",
+        "SenderAccountId" : accountuser.Account_id,
         "ReceiverAccountId" : accountID,
         "Amount" : amount
       }
       alert("Are your sure ?")
       axios.post(url, trdata)
-      .then(res=>{
+      .then(res=>{ 
         notify()
       })
       .catch(err=>alert("transaction failed"))
@@ -65,10 +65,10 @@ alert(otp)
   console.log("account user came"+ acuser.FirstName)
   }
   const sendOtpToSender = async ()=>{
-    const email = "aishwaryareddy949@gmail.com";
+    const email = accountuser.Email;
     // const email = user.Email;
-    const username = "Aishwarya CP";
-    const url = `http://localhost:5000/sendpaymentotp/${email}/${username}`
+    const username = accountuser.FirstName;
+    const url = `http://localhost:5000/sendpaymentotp/${email}/${username}/${amount}`
     axios.get(url)
     .then(res=>{
       setOtpreceived(res.data.otp)

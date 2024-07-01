@@ -13,8 +13,8 @@ import Payroll from './compnonents/MainComponents/Payroll/Payroll'
 import ForgotPassword from './compnonents/MainComponents/ForgotPassword/ForgotPassword'
 import RegistrationConfromation from "./compnonents/MainComponents/ConfirmationComponents/RegistrationConfromation"
 export default function App() {
-  localStorage.setItem("loading","true")
-  const [isloadinpage,setislodingpage] = useState(localStorage.setItem("loading","true"))
+  localStorage.setItem("loading","false")
+  const [isloadinpage,setislodingpage] = useState(localStorage.setItem("loading","false"))
   useEffect(()=>{
     setislodingpage(localStorage.getItem("loading"))
   })
