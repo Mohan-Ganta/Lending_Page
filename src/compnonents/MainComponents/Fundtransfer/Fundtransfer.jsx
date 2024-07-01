@@ -17,19 +17,19 @@ const Fundtransfer = () => {
   const handleCancel = () => {
     setStep(1);
   };
-  const handleConfirmPay = async() => {
+  const handleConfirmPay =() => {
+alert("clicked")
+alert(otp)
     if (otp === String(otpreceived)) {
+      alert("otp verified")
       const url = "http://localhost:5000/users/transaction";
       const trdata = {
-        "SenderAccountId" : "ZBKIN202400001",
+        "SenderAccountId" : "ZBKIN202400004",
         "ReceiverAccountId" : accountID,
         "Amount" : amount
       }
-      axios.post(url, {
-        SenderAccountId: "ZBKIN202400001",
-        ReceiverAccountId: accountID,
-        Amount: amount,
-      })
+      alert("Are your sure ?")
+      axios.post(url, trdata)
       .then(res=>{
         notify()
       })
@@ -65,25 +65,20 @@ const Fundtransfer = () => {
   console.log("account user came"+ acuser.FirstName)
   }
   const sendOtpToSender = async ()=>{
-    const email = "tempabc70759@gmail.com";
+    const email = "aishwaryareddy949@gmail.com";
     // const email = user.Email;
-    const username = "Kotesh";
-    // const username = `${user.FirstName} ${user.LastName}`;
-    const url = `http://localhost:5000/sendpaymentotp/${email}/${username}`;
-    axios.get(url).then((res) => {
-      setOtpreceived(res.data.otp);
-    });
-    // const res = await axios.get(url)
-
-
+    const username = "Aishwarya CP";
+    const url = `http://localhost:5000/sendpaymentotp/${email}/${username}`
+    axios.get(url)
+    .then(res=>{
+      setOtpreceived(res.data.otp)
+    })
   }
   const handleContinue = async (e) => {
     e.preventDefault();
     // await getUserName()
-    console.log("finished step 1")
     await sendOtpToSender()
-    console.log("otp received step2")
-    console.log("otp received is ",otpreceived)
+    
     setStep(2);
   };
   const handleOtpChange = (e) => {
@@ -153,10 +148,10 @@ const Fundtransfer = () => {
               <input type="text" id="accountHolder" value={amount} disabled />
             </div>
             <div className="form-item">
-              <label className="label" onChange={handleOtpChange} htmlFor="otp">
+              <label className="label" htmlFor="otp">
                 Enter OTP
               </label>
-              <input type="text" id="otp" placeholder="Enter OTP" required />
+              <input type="text" id="otp" onChange={handleOtpChange} placeholder="Enter OTP" required />
             </div>
 
             {errormsg && (<p>{errormsg}</p>)}

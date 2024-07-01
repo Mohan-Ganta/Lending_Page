@@ -10,6 +10,7 @@ import Fundtransfer from "./compnonents/MainComponents/Fundtransfer/Fundtransfer
 import Transactions from "./compnonents/MainComponents/Transactions/Transactions"
 import Recharge from './compnonents/MainComponents/Recharge/Recharge'
 import Payroll from './compnonents/MainComponents/Payroll/Payroll'
+import RegistrationConfromation from "./compnonents/MainComponents/ConfirmationComponents/RegistrationConfromation"
 export default function App() {
   localStorage.setItem("loading","true")
   const [isloadinpage,setislodingpage] = useState(localStorage.setItem("loading","true"))
@@ -36,6 +37,7 @@ export default function App() {
             <Route path='/transactions' element={<Transactions />} />
             <Route path='/recharge' element={<Recharge />} />
             <Route path='/payroll' element={<Payroll />} />
+            <Route path='/registrationsuccess' element={<RegistrationConfromation />} />
             
       </Routes>
     </div>

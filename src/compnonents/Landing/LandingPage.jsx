@@ -13,6 +13,7 @@ export default function LandingPage() {
   return (
     <div className='main-page'>
       <NavBar/>
+      <button className='signin-btn-home'>SignIn to your Account</button>
       <Hero/>
       <Scroll/>
       <div className='About'>
