@@ -19,6 +19,10 @@ const Sidebar = () => {
     navigate(path);
     setActivePath(path);
   };
+  const handleLogout = ()=>{
+    localStorage.setItem("loading","true")
+    navigate("/")
+  }
 
   return (
     <div className="sidebar">
@@ -38,7 +42,7 @@ const Sidebar = () => {
       <div className={`sidebar-item ${activePath === '/payroll' ? 'active' : ''}`} onClick={() => handleNavigation('/payroll')}>
         <FontAwesomeIcon icon={faCreditCard} /> <span>Generate Payroll</span>
       </div>
-      <div className={`sidebar-item ${activePath === '/logout' ? 'active' : ''}`} onClick={() => handleNavigation('/logout')}>
+      <div className={`sidebar-item ${activePath === '/logout' ? 'active' : ''}`} onClick={handleLogout}>
         <FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span>
       </div>
       <div className="sidebar-footer">

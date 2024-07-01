@@ -9,3 +9,15 @@
 .tabsection .ant-tabs-tab-btn {
     margin-top :20px;
   }
+
+  .redirect-to-login{
+    position: absolute;
+    bottom: 2em;
+    left: 10px;
+
+  }
+
+  .redirect-to-login a{
+    text-decoration: none;
+    color: blue;
+  }

@@ -10,6 +10,7 @@ import Fundtransfer from "./compnonents/MainComponents/Fundtransfer/Fundtransfer
 import Transactions from "./compnonents/MainComponents/Transactions/Transactions"
 import Recharge from './compnonents/MainComponents/Recharge/Recharge'
 import Payroll from './compnonents/MainComponents/Payroll/Payroll'
+import ForgotPassword from './compnonents/MainComponents/ForgotPassword/ForgotPassword'
 import RegistrationConfromation from "./compnonents/MainComponents/ConfirmationComponents/RegistrationConfromation"
 export default function App() {
   localStorage.setItem("loading","true")
@@ -38,6 +39,7 @@ export default function App() {
             <Route path='/recharge' element={<Recharge />} />
             <Route path='/payroll' element={<Payroll />} />
             <Route path='/registrationsuccess' element={<RegistrationConfromation />} />
+            <Route path='/forgotpassword' element={<ForgotPassword />} />
             
       </Routes>
     </div>

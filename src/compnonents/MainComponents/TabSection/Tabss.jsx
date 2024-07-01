@@ -100,6 +100,9 @@ const Tabss = () => {
           };
         })}
       />
+      <div className="redirect-to-login">
+        <a href="/login">&larr; Back to Login</a>
+      </div>
     </div>
   );
 };

@@ -113,7 +113,7 @@ const Login = () => {
             <div className="additional-links">
               <p style={{color:"black"}}>
                 Do not have an Account yet?{" "}
-                <a href="/" className="forget">
+                <a href="/register" className="forget">
                   Register Here
                 </a>
               </p>

@@ -45,12 +45,13 @@ const transactions = [
 ];
 const UserDashboard = () => {
   const [currentDate, setCurrentDate] = useState("");
-
+  
   useEffect(()=>{
     localStorage.setItem("loading", "false");
         const now = new Date();
     const formattedDate = format(now, "dd MMMM, EEEE");
     setCurrentDate(formattedDate);
+
  
   })
   const availableBalance = 1000;

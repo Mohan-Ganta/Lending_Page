@@ -4,6 +4,8 @@ body{
     margin: 0;
     background-color: #F4F4F4;
     font-family: Poppins;
+    width: 100vw;
+    
 }
 
 /* carousel */

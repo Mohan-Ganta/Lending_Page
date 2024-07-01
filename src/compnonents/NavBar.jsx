@@ -9,10 +9,9 @@ export default function NavBar() {
             <img src={Logo} alt="" />
 
         </div>
-        <div className='nav-itms'>
-            <li>About</li>
-            <li>Services</li>
-            <li>Contact</li>
+        <div className='landing-nav-itms'>
+            <a href="/login">Sign in</a>
+            <a href="/register">Sign Up</a>
         </div>
     </div>
   )
