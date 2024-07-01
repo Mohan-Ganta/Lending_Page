@@ -9,6 +9,7 @@ import Login from "./compnonents/MainComponents/Login/Login"
 import Fundtransfer from "./compnonents/MainComponents/Fundtransfer/Fundtransfer"
 import Transactions from "./compnonents/MainComponents/Transactions/Transactions"
 import Recharge from './compnonents/MainComponents/Recharge/Recharge'
+import Payroll from './compnonents/MainComponents/Payroll/Payroll'
 export default function App() {
   localStorage.setItem("loading","true")
   const [isloadinpage,setislodingpage] = useState(localStorage.setItem("loading","true"))
@@ -34,6 +35,7 @@ export default function App() {
             <Route path='/fundtransfer' element={< Fundtransfer/>} />
             <Route path='/transactions' element={<Transactions />} />
             <Route path='/recharge' element={<Recharge />} />
+            <Route path='/payroll' element={<Payroll />} />
             
       </Routes>
     </div>

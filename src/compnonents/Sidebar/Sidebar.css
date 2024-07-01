@@ -1,37 +1,4 @@
-/* .sidebar {
-  width: 20vw;
-  background-color: #703ACC;
-  color: white;
-  padding: 20px;
-}
 
-.sidebar-header {
-  padding: 10px;
-  font-size: 24px;
-  text-align: center ;
-
-}
-
-.sidebar-item {
-  margin: 50px auto;
-  font-size: 22px;
-  cursor: pointer;
-  transition: background-color 0.3s;
- margin-left: 50px; 
-  margin: 20px;
-}
-
-.sidebar-item:hover {
-  background-color: #311898;
-  width: 100%;
-  padding: 20px;
-  margin-left: -0px;
-}
-
-.sidebar-footer {
-  padding-left: 60px;
-  font-size: 20px;
-} */
 .sidebar {
   width: 16vw;
   background-color: #28376E;
