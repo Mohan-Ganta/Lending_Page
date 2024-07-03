@@ -92,9 +92,9 @@ const UserDashboard = () => {
   const { state } = location;
   const { email, name, subject } = state || {};
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <div className="userdashboard-main-container">
@@ -121,7 +121,7 @@ const UserDashboard = () => {
               <span style={{ fontSize: "35px" }}>
                 <CountUp
                   start={0}
-                  end={78400}
+                  end={0}
                   duration={1.6}
                   separator=","
                 />
@@ -143,7 +143,7 @@ const UserDashboard = () => {
               <span style={{ fontSize: "35px" }}>
                 <CountUp
                   start={0}
-                  end={546}
+                  end={0}
                   duration={2}
                   separator=","
                 />

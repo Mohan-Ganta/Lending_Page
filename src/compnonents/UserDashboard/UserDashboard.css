@@ -247,7 +247,7 @@
 
 @keyframes slideIn {
   from {
-    transform: translateX(-60%);
+    transform: translateX(60%);
     opacity: 0;
   }
   to {
@@ -267,6 +267,3 @@
   }
 }
 
-.slide-out {
-  animation: slideOut 0.7s ease-in-out forwards;
-}

@@ -1,30 +1,30 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoneyCheckAlt, faFileInvoiceDollar, faExchangeAlt, faUser, faBell, faCreditCard, faSignOutAlt, faEnvelope, faCog, faQuestionCircle,faSearch } from '@fortawesome/free-solid-svg-icons';
-import './Header.css'
+import {  faSignOutAlt, faEnvelope, faCog, faQuestionCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
     <div>
-      <header className="header">
-          <h2>Welcome, UserName</h2>
-         <div className="search-bar-container">
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
-            <input 
-              type="text" 
-              className="search-bar" 
-              placeholder="Search..." 
-            />
-          </div>
-          <div className="top-icons">
-            <FontAwesomeIcon icon={faEnvelope} className="top-icon" />
-            <FontAwesomeIcon icon={faCog} className="top-icon" />
-            <FontAwesomeIcon icon={faQuestionCircle} className="top-icon" />
-            <FontAwesomeIcon icon={faSignOutAlt} className="top-icon" />
-          </div>
-        </header>
+      <header className={styles.header}>
+        <h2>Welcome, UserName</h2>
+        <div className={styles.searchBarContainer}>
+          <FontAwesomeIcon icon={faSearch} className={styles.searchIcon} />
+          <input 
+            type="text" 
+            className={styles.searchBar} 
+            placeholder="Search..." 
+          />
+        </div>
+        <div className={styles.topIcons}>
+          <FontAwesomeIcon icon={faEnvelope} className={styles.topIcon} />
+          <FontAwesomeIcon icon={faCog} className={styles.topIcon} />
+          <FontAwesomeIcon icon={faQuestionCircle} className={styles.topIcon} />
+          <FontAwesomeIcon icon={faSignOutAlt} className={styles.topIcon} />
+        </div>
+      </header>
     </div>
   )
 }
 
-export default Header
+export default Header;
