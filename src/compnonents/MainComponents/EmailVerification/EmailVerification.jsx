@@ -19,7 +19,12 @@ const [receivedOtp,setReceivedOtp] = useState()
         autoClose: 1500,
       });
     };
-
+    const otpfail = () => {
+      toast.error('Error!', {
+        position: 'top-center',
+        autoClose: 1500,
+      });
+    };
     const otpSuccess = ()=>{
       toast.success("OTP verified",{
         position:'top-center',
@@ -77,7 +82,7 @@ const [receivedOtp,setReceivedOtp] = useState()
       onSubmission()
     }
     else
-      alert("paaaye")
+      otpfail()
   }
 
   return (

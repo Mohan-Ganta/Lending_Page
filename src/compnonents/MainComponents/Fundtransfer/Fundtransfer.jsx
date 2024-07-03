@@ -129,18 +129,7 @@ alert(otp)
           <div className="details-card">
             <h3>Confirm Transaction Details</h3>
             <p>** OTP has been sent to your registered mail</p>
-            {/* <div className="form-item">
-              <label className="label" htmlFor="accountHolder">
-                Account Holder
-              </label>
-              <input
-                type="text"
-                id="accountHolder"
-                value={`${accountuser.FirstName} ${accountuser.LastName}`}
-                // value={`Koteshwar rao`}
-                disabled
-              />
-            </div> */}
+            
             <div className="form-item">
               <label className="label" htmlFor="Amount">
                 Amount
